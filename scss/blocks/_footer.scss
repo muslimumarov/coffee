@@ -1,0 +1,113 @@
+/*! Footer started */
+// .site-footer {
+  //   padding: 47px 85px;
+  //   background-color: #2c343e;
+  // }
+  .site-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px;
+    background-color: #2c343e;
+  }
+  .site-footer__image {
+    margin-bottom: 48px;
+  }
+  .site-footer__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 48px;
+    padding-left: 0;
+    list-style: none;
+  }
+  .footer-network__list {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .site-footer__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .site-footer__link {
+    margin-bottom: 48px;
+  }
+  .footer-link {
+    color: #83888f;
+    font-family: "Barlow";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.923px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .footer-network__link {
+    fill: #fff;
+    transition: 0.4s linear;
+    &:hover {
+      fill: #fdd6b9;
+    }
+  }
+  @include mobile-first(768px) {
+    .site-footer__wrapper {
+      display: flex;
+      align-items: center;
+
+    }
+    .site-footer__list {
+      flex-direction: row;
+      align-items: flex-start;
+      // max-width: 283px;
+      // width: 100%;
+    }
+    .site-footer__image {
+      max-width: 236px;
+      height: 26px;
+      width: 100%;
+      margin-left: 20px;
+      margin-bottom: 32px;
+    }
+    .site-footer__item {
+      margin: 0;
+    }
+    .site-footer__item:not(:last-child) {
+      margin-right: 33px;
+    }
+  }
+
+  @include mobile-first(992px) {
+    .site-footer__wrapper {
+      padding: 48px 85px;
+      margin-bottom: 48px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      }
+    .site-footer__info {
+      display: flex;
+    }
+
+    .site-footer__link {
+      margin-bottom: 0;
+    }
+    .site-footer__image {
+      margin: 0;
+    }
+
+    .site-footer__list {
+      align-items: center;
+      margin-bottom: 0;
+      margin-left: 103px;
+    }
+    .site-footer__item:not(:last-child) {
+      margin-bottom: 0;
+    }
+  
+  }
