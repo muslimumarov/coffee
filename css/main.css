@@ -346,14 +346,14 @@ template {
   src: local(""), url("../fonts/fraunces-v23-latin-900.woff2") format("woff2"), url("../fonts/fraunces-v23-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
   clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .container {
@@ -542,6 +542,10 @@ template {
   }
 }
 /*! Plan section */
+.plan {
+  padding-bottom: 120px;
+}
+
 .plan__wrapper {
   padding: 80px 24px;
   border-radius: 10px;
@@ -826,5 +830,199 @@ template {
   .plan__wrapper {
     padding-right: 85px;
     padding-left: 85px;
+  }
+}
+/*! Card started */
+.card {
+  padding-bottom: 120px;
+}
+
+.card__list {
+  display: none;
+  margin-right: 125px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.card__form-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.card__form-item:not(:last-child) {
+  margin-bottom: 96px;
+}
+
+.card__form-summary {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  color: #83888f;
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 28px;
+  list-style: none;
+}
+.card__form-summary::before {
+  display: inline-block;
+  margin-top: 10px;
+  width: 19px;
+  height: 18px;
+  background-image: url("../../images/current.svg");
+  background-repeat: no-repeat;
+  transition: 0.4s linear;
+  content: "";
+}
+
+.card__form-details[open] .card__form-summary::before {
+  transform: rotate(180deg);
+}
+
+.card__form-label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.card__form-info {
+  width: 100%;
+  padding: 24px 25px;
+  border-radius: 8px;
+  background-color: #f4f1eb;
+  color: #333d4b;
+  transition: 0.4s linear;
+  cursor: pointer;
+}
+.card__form-info:hover {
+  background-color: #fdd6ba;
+}
+
+.card__form-input:checked ~ .card__form-info {
+  background-color: #0e8784;
+  color: #fff;
+}
+
+.cadr__form-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.card__form-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Barlow";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@media only screen and (min-width: 650px) {
+  .card__form-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .card__form-info {
+    max-width: 180px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card__form-info {
+    padding: 32px 26px 84px 25px;
+    max-width: 180px;
+    width: 100%;
+  }
+  .card__form-summary {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  .cadr__form-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .card__form-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__wrapper {
+    display: flex;
+  }
+  .card__item {
+    margin-left: 50px;
+    margin-right: 75px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #83888f;
+  }
+  .card__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  .card__form-summary {
+    font-size: 18px;
+    line-height: 48px;
+  }
+  .card__list {
+    display: block;
+  }
+  .card__item {
+    min-width: 242px;
+  }
+  .card__form-summary {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    color: #83888f;
+    font-family: "Fraunces";
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28px;
+    list-style: none;
+  }
+  .card__form-summary::before {
+    display: inline-block;
+    margin-left: 311px;
+    margin-top: 10px;
+    width: 19px;
+    height: 18px;
+    background-image: url("../../images/current.svg");
+    background-repeat: no-repeat;
+    transition: 0.4s linear;
+    content: "";
+  }
+  .card__link {
+    color: #acafb2;
+    font-family: "Fraunces";
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 32px;
+    text-decoration: none;
+  }
+  .card__link:hover {
+    color: #333D4B;
+  }
+  .card__link:active {
+    color: #858a90;
+  }
+  .card__span {
+    margin-right: 5px;
+    color: #83888f;
+    font-family: "Fraunces";
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 32px;
+  }
+  .card__link:hover .card__span {
+    color: #0e8784;
   }
 }/*# sourceMappingURL=main.css.map */
