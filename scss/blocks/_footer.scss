@@ -1,8 +1,7 @@
 /*! Footer started */
-// .site-footer {
-  //   padding: 47px 85px;
-  //   background-color: #2c343e;
-  // }
+.site-footer {
+    margin-bottom: 72px;
+  }
   .site-footer__wrapper {
     display: flex;
     flex-direction: column;
@@ -56,6 +55,9 @@
     }
   }
   @include mobile-first(768px) {
+    .site-footer {
+      margin-bottom: 72px;
+    }
     .site-footer__wrapper {
       display: flex;
       align-items: center;
@@ -83,9 +85,11 @@
   }
 
   @include mobile-first(992px) {
+    .site-footer {
+      margin-bottom: 88px;
+    }
     .site-footer__wrapper {
       padding: 48px 85px;
-      margin-bottom: 48px;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -109,5 +113,5 @@
     .site-footer__item:not(:last-child) {
       margin-bottom: 0;
     }
-  
+
   }

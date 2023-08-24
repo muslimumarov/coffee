@@ -1121,6 +1121,10 @@ template {
   }
 }
 /*! Footer started */
+.site-footer {
+  margin-bottom: 72px;
+}
+
 .site-footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -1182,6 +1186,9 @@ template {
 }
 
 @media only screen and (min-width: 768px) {
+  .site-footer {
+    margin-bottom: 72px;
+  }
   .site-footer__wrapper {
     display: flex;
     align-items: center;
@@ -1205,9 +1212,11 @@ template {
   }
 }
 @media only screen and (min-width: 992px) {
+  .site-footer {
+    margin-bottom: 88px;
+  }
   .site-footer__wrapper {
     padding: 48px 85px;
-    margin-bottom: 48px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
